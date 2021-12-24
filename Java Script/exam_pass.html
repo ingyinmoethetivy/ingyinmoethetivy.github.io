@@ -8,16 +8,48 @@
 </head>
 <body>
     <h1>Exam Result</h1>
-    <label for="turbo C">Turbo C</label>
-    <input type="text" name="text" id="text" placeholder="Enter Turbo C Mark" required>
+    <form name="myForm">
+    <label for="C">Turbo C</label>
+    <input type="number" name="c" id="c" placeholder="Enter Turbo C Mark" required>
     <br><br>
     <label for="Java">Java</label>
-    <input type="text" name="text" id="text" placeholder="Enter Java Mark"required>
+    <input type="number" name="java" id="java" placeholder="Enter Java Mark"required>
     <br><br>
-    <label for="JavaScript mark">JavaScript</label>
-    <input type="text" name="text" id="text" placeholder="Enter JavaScript mark"required>
+    <label for="js">JavaScript</label>
+    <input type="number" name="js" id="js" placeholder="Enter JavaScript mark"required>
     <br><br>
-    <button type="result">Result</button>
+    <button type="button" onclick="result()">Result</button>
+    </form>
+    <script>
+        function result(){
+            //alert("Hello")
+            let c = document.myForm.c.value;
+            console.log(c);
+            let java = document.myForm.java.value;
+            console.log(java);
+            let js = document.myForm.js.vallue;
+            console.log(js);
+
+            //&&
+            //||
+            //! 
+
+            if (c < 50 || java < 50 || js >= 50){
+                document.write("<h1>This student isFail!</h1>")
+            }else if ( c > 80 || java || 80 && js || 80){
+                document.write("<h1>This student is Pass with Distiction!</h1>")
+            }else {
+                document.write("<h1>This student is Pass!</h1>")
+            }
+            
+           
+        }
+
+            
+        
+        
+
+    </script>
 
     
 </body>
